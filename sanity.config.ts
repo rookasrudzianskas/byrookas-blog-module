@@ -17,7 +17,9 @@ export default defineConfig({
   projectId,
   dataset,
 
-  plugins: [deskTool(), visionTool()],
+  plugins: [deskTool({
+    defaultDocumentNode:
+  }), visionTool()],
 
   schema: {
     types: schemaTypes,
