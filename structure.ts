@@ -27,5 +27,4 @@ export const getDefaultDocumentNode: DefaultDocumentNodeResolver = (
                     .title("Preview"),
             ]);
         }
-    }
-)
+    };
