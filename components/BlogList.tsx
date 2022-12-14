@@ -29,10 +29,10 @@ const BlogList = ({posts}: Props) => {
                                     </p>
                                 </div>
 
-                                <div>
+                                <div className="flex flex-col md:flex-row gap-y-2 md:gap-x-2 items-center">
                                     {post.categories.map((categoryData: Category, index) => {
                                         return (
-                                            <div key={index}>
+                                            <div key={index} className="">
                                                 {categoryData !== null && (
                                                     <div className="bg-[#F7AB0A] text-center text-black px-3 py-1 rounded-full text-sm font-semibold">
                                                         <p>{categoryData.title}</p>
@@ -43,6 +43,11 @@ const BlogList = ({posts}: Props) => {
                                     })}
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="mt-5 flex-1">
+                            <p className="underline text-lg font-bold">{post.title}</p>
+                            <p className="text-gray-500">{post.description || 'Loading...'}</p>
                         </div>
                     </div>
                 ))}
