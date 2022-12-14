@@ -1,6 +1,7 @@
 import React from 'react';
 import {previewData} from "next/headers";
 import groq from "groq";
+import { client } from '../../lib/sanity.client';
 
 const query = groq`
     *[_type=='post']{
@@ -10,11 +11,14 @@ const query = groq`
     } | order(_createdAt desc)
 `;
 
-const HomePage = ({}) => {
+const HomePage = async ({}) => {
 
-    if(previewData()) {
+    if (previewData()) {
         return <div>Preview mode</div>
     }
+
+    const posts = await client.fetch(query);
+    // console.log(posts);
 
     return (
         <div>
