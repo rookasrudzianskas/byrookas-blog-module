@@ -56,7 +56,7 @@ const Post = async ({params: {slug}}: Props) => {
                         <div className="flex flex-col md:flex-row justify-between gap-y-5">
                             <div>
                                 <h1 className="text-4xl font-extrabold">
-                                    {post.title}
+                                    {post?.title}
                                 </h1>
                                 <p className="">
                                     {new Date(post._createdAt).toLocaleDateString("en-US", {
@@ -87,9 +87,13 @@ const Post = async ({params: {slug}}: Props) => {
                         <div>
                             <h2 className="pt-10 italic ">{post.description}</h2>
                             <div className="flex items-center justify-end mt-auto space-x-2">
-                                {post.categories.map((category) => (
-                                    <div className="bg-gray-800 text-white px-3 py-1 rounded-full text-sm font-semibold mt-4" key={category._id}>
-                                        {category.title}
+                                {post.categories.map((category, index) => (
+                                    <div key={index}>
+                                        {category && (
+                                            <div className="bg-gray-800 text-white px-3 py-1 rounded-full text-sm font-semibold mt-4">
+                                                {category?.title}
+                                            </div>
+                                        )}
                                     </div>
                                 ))}
                             </div>
