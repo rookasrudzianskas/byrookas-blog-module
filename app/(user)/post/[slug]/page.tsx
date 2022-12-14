@@ -4,6 +4,7 @@ import {client} from "../../../../lib/sanity.client";
 import urlFor from "../../../../lib/urlFor";
 import Image from 'next/image';
 import { PortableText } from "@portabletext/react";
+import { RichTextComponents } from '../../../../components/RichTextComponents';
 
 type Props = {
     params: {
