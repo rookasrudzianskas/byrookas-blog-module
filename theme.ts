@@ -11,17 +11,17 @@ const props = {
 
 export const myTheme = buildLegacyTheme({
     /* Base theme colors */
-    "--black": props ["--my-black"],
-    "--white": props ["-my-white"],
+    "--black": props["--my-black"],
+    "--white": props["-my-white"],
 
     "--gray": "#666",
     "--gray-base": "#666",
 
-    "--component-bg": props ["--my-black"],
-    "--component-text-color": props ["--my-white"],
+    "--component-bg": props["--my-black"],
+    "--component-text-color": props["--my-white"],
 
     /* Brand */
-    "--brand-primary": props ["--rokas-brand"],
+    "--brand-primary": props["--rokas-brand"],
 
     // Default button
     "--default-button-color":"#666",
