@@ -82,7 +82,7 @@ const Post = async ({params: {slug}}: Props) => {
                 </div>
             </section>
 
-
+            <PortableText value={post.body} components={RichTextComponents} />
         </article>
     );
 };

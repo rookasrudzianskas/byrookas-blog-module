@@ -53,7 +53,8 @@ const BlogList = ({posts}: Props) => {
                                 <p className="text-gray-500 line-clamp-2">{post.description || 'Loading...'}</p>
                             </div>
 
-                            <p className="mt-5 font-bold flex items-center group-hover:underline">Read Post
+                            <p className="mt-5 font-bold flex items-center group-hover:underline">
+                                Read Post
                                 <ArrowUpRightIcon className="ml-2 h-4 w-4"/>
                             </p>
                         </div>
